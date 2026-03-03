@@ -211,6 +211,76 @@ footer{
   color:var(--muted);
 }
 
+/* Tutorial section */
+.tutorial-lede{
+  margin:0 0 12px 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.tutorial-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+  margin-top:16px;
+}
+
+.tutorial-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px 14px;
+  background:#fff;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.tutorial-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.08);
+  border-color:#d7d7d7;
+}
+
+.tutorial-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:8px;
+}
+
+.tutorial-title{
+  margin:0;
+  font-size:1.02rem;
+  font-weight:700;
+  color:var(--accent);
+  line-height:1.25;
+}
+
+.badge{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  padding:4px 8px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--soft);
+  color:var(--muted);
+  font-size:0.78rem;
+  line-height:1;
+}
+
+.tutorial-desc{
+  margin:0 0 10px 0;
+  font-size:0.92rem;
+  color:var(--muted);
+}
+
+.tutorial-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* Toast */
 #toast{
   visibility:hidden;
   min-width:120px;
@@ -305,6 +375,63 @@ footer{
       </div>
     </a>
 
+  </div>
+
+  <!-- Tutorial videos -->
+  <div style="margin-top:26px;">
+    <h3 style="margin:0 0 8px 0; font-size:1.05rem; color:var(--accent);">Tutorial Videos</h3>
+    <p class="tutorial-lede">
+      Full-screen-friendly walkthroughs for the 2D and 3D browsers.
+    </p>
+
+    <div class="tutorial-grid">
+
+      <!-- Replace these URLs with your real video URLs -->
+      <div class="tutorial-card">
+        <div class="tutorial-top">
+          <p class="tutorial-title">Intro & Core Navigation</p>
+          <span class="badge">~2 min</span>
+        </div>
+        <p class="tutorial-desc"></p>
+        <div class="tutorial-actions">
+          <a class="pill" href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/movies/ZMAP_Intro.mp4" target="_blank" rel="noopener">Watch</a>
+        </div>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-top">
+          <p class="tutorial-title">Explore by Cell Type</p>
+          <span class="badge">~2 min</span>
+        </div>
+        <p class="tutorial-desc"></p>
+        <div class="tutorial-actions">
+          <a class="pill" href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/movies/ZMAP_Explore_By_CellType.mp4" target="_blank" rel="noopener">Watch</a>
+        </div>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-top">
+          <p class="tutorial-title">Explore by Gene</p>
+          <span class="badge">~7 min</span>
+        </div>
+        <p class="tutorial-desc"></p>
+        <div class="tutorial-actions">
+          <a class="pill" href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/movies/ZMAP_Explore_By_Gene.mp4" target="_blank" rel="noopener">Watch</a>
+        </div>
+      </div>
+
+      <div class="tutorial-card">
+        <div class="tutorial-top">
+          <p class="tutorial-title">Full Tutorial</p>
+          <span class="badge">~10 min</span>
+        </div>
+        <p class="tutorial-desc"></p>
+        <div class="tutorial-actions">
+          <a class="pill" href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/movies/ZMAP_Full_Tutorial.mp4" target="_blank" rel="noopener">Watch</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
