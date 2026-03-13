@@ -285,15 +285,20 @@ footer{
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:12px;
-  padding:38px 18px;
+  gap:16px;
+  padding:72px 18px;
   background:linear-gradient(135deg, var(--soft) 0%, #eaf0f7 100%);
   color:var(--accent);
   border-bottom:1px solid var(--border);
 }
 
+.docs-banner svg{
+  width:80px;
+  height:80px;
+}
+
 .docs-banner-label{
-  font-size:1.1rem;
+  font-size:1.3rem;
   font-weight:600;
   letter-spacing:0.02em;
 }
@@ -375,7 +380,6 @@ footer{
           Explore UMAP embeddings, query gene expression, visualize marker sets, and interact with the ZMAP ontology in 2D.
         </p>
         <div class="small-links">
-          <span class="pill" onclick="copyLink('https://zmap.pages.dev/'); return false;">Copy Link</span>
         </div>
       </div>
     </a>
@@ -388,7 +392,6 @@ footer{
           Navigate the integrated atlas in 3D space, inspect developmental structure, and explore the embedding interactively.
         </p>
         <div class="small-links">
-          <span class="pill" onclick="copyLink('https://zmap-3d.pages.dev/'); return false;">Copy Link</span>
         </div>
       </div>
     </a>
@@ -409,8 +412,8 @@ footer{
           API reference, installation guide, and tutorials for the <code>zmap-tools</code> Python package — annotate new datasets against the ZMAP reference.
         </p>
         <div class="small-links">
-          <span class="pill" onclick="copyLink('https://zmap-tools.readthedocs.io/en/latest/index.html'); return false;">Copy Link</span>
-          <span class="pill" onclick="copyLink('pip install zmap-tools'); return false;">pip install</span>
+
+
         </div>
       </div>
     </a>
