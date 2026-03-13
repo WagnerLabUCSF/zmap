@@ -286,7 +286,7 @@ footer{
   align-items:center;
   justify-content:center;
   gap:16px;
-  padding:72px 18px;
+  padding:96px 18px;
   background:linear-gradient(135deg, var(--soft) 0%, #eaf0f7 100%);
   color:var(--accent);
   border-bottom:1px solid var(--border);
@@ -339,7 +339,7 @@ footer{
 <div class="container">
 
 <header>
-  <h1>ZMAP: Cross-study integration of zebrafish embryonic single-cell atlases provides consensus hierarchical views of cell type identity</h1>
+  <h1>ZMAP: A cross-study reference atlas of zebrafish embryonic development reveals a consensus hierarchy of cell identities</h1>
   <p class="kicker"><strong>ZMAP</strong> (Zebrafish Multi-study Atlas Project) is a harmonized single-cell RNA-seq reference atlas for zebrafish embryogenesis developed by the Wagner Lab at the University of California, San Francisco.</p>
 
   <div class="meta-card">
@@ -351,7 +351,7 @@ footer{
       <sup>2</sup> Eli and Edythe Broad Center for Regeneration Medicine and Stem Cell Research, University of California San Francisco, San Francisco, CA, USA
     </p>
     <p class="correspondence">
-      <strong>* Correspondence:</strong> <a href="/cdn-cgi/l/email-protection#d6b2b7b8bfb3baf8a1b7b1b8b3a496a3b5a5b0f8b3b2a3"><span class="__cf_email__" data-cfemail="93f7f2fdfaf6ffbde4f2f4fdf6e1d3e6f0e0f5bdf6f7e6">[email&#160;protected]</span></a>
+      <strong>* Correspondence:</strong> <a href="mailto:daniel.wagner@ucsf.edu">daniel.wagner@ucsf.edu</a>
     </p>
   </div>
 </header>
@@ -380,6 +380,7 @@ footer{
           Explore UMAP embeddings, query gene expression, visualize marker sets, and interact with the ZMAP ontology in 2D.
         </p>
         <div class="small-links">
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://zmap.pages.dev/'); return false;">Copy Link</span>
         </div>
       </div>
     </a>
@@ -392,6 +393,7 @@ footer{
           Navigate the integrated atlas in 3D space, inspect developmental structure, and explore the embedding interactively.
         </p>
         <div class="small-links">
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://zmap-3d.pages.dev/'); return false;">Copy Link</span>
         </div>
       </div>
     </a>
@@ -412,8 +414,8 @@ footer{
           API reference, installation guide, and tutorials for the <code>zmap-tools</code> Python package — annotate new datasets against the ZMAP reference.
         </p>
         <div class="small-links">
-
-
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://zmap-tools.readthedocs.io/en/latest/index.html'); return false;">Copy Link</span>
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('pip install zmap-tools'); return false;">pip install</span>
         </div>
       </div>
     </a>
@@ -487,25 +489,25 @@ footer{
   <div class="download-item">
     <strong>Raw counts</strong> <span class="muted">(3.5 GB; raw counts)</span><br>
     <a href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_250402_raw.h5ad">Download</a>
-    <button class="copy-btn" onclick="copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_250402_raw.h5ad')">Copy Link</button>
+    <button class="copy-btn" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_250402_raw.h5ad')">Copy Link</button>
   </div>
 
   <div class="download-item">
     <strong>Processed (recommended)</strong> <span class="muted">(3.5 GB; raw counts + all annotations)</span><br>
     <a href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed_slim.h5ad">Download</a>
-    <button class="copy-btn" onclick="copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed_slim.h5ad')">Copy Link</button>
+    <button class="copy-btn" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed_slim.h5ad')">Copy Link</button>
   </div>
 
   <div class="download-item">
     <strong>Processed (full)</strong> <span class="muted">(~25 GB; processed counts + annotations + intermediate embeddings and graphs)</span><br>
     <a href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed.h5ad">Download</a>
-    <button class="copy-btn" onclick="copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed.h5ad')">Copy Link</button>
+    <button class="copy-btn" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_251209_processed.h5ad')">Copy Link</button>
   </div>
 
   <div class="download-item">
     <strong>Symphony reference</strong><br>
     <a href="https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_260103_symphony.h5ad">Download</a>
-    <button class="copy-btn" onclick="copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_260103_symphony.h5ad')">Copy Link</button>
+    <button class="copy-btn" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://pub-dbadc2c623224cb58d93cfa3b950fef5.r2.dev/h5ad/ZMAP_260103_symphony.h5ad')">Copy Link</button>
   </div>
 </section>
 
@@ -527,7 +529,7 @@ footer{
 
 <div id="toast">Link copied</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function copyLink(url){
   if (navigator.clipboard && navigator.clipboard.writeText){
     navigator.clipboard.writeText(url).then(() => showToast("Link copied"));
@@ -540,4 +542,16 @@ function copyLink(url){
     document.execCommand("copy");
     document.body.removeChild(t);
     showToast("Link copied");
- 
+  }
+}
+
+function showToast(msg){
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.className = "show";
+  setTimeout(() => { toast.className = toast.className.replace("show",""); }, 1400);
+}
+</script>
+
+</body>
+</html>
