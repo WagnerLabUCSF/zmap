@@ -280,6 +280,24 @@ footer{
   flex-wrap:wrap;
 }
 
+.docs-banner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:38px 18px;
+  background:linear-gradient(135deg, var(--soft) 0%, #eaf0f7 100%);
+  color:var(--accent);
+  border-bottom:1px solid var(--border);
+}
+
+.docs-banner-label{
+  font-size:1.1rem;
+  font-weight:600;
+  letter-spacing:0.02em;
+}
+
 /* Toast */
 #toast{
   visibility:hidden;
@@ -328,7 +346,7 @@ footer{
       <sup>2</sup> Eli and Edythe Broad Center for Regeneration Medicine and Stem Cell Research, University of California San Francisco, San Francisco, CA, USA
     </p>
     <p class="correspondence">
-      <strong>* Correspondence:</strong> <a href="mailto:daniel.wagner@ucsf.edu">daniel.wagner@ucsf.edu</a>
+      <strong>* Correspondence:</strong> <a href="/cdn-cgi/l/email-protection#d6b2b7b8bfb3baf8a1b7b1b8b3a496a3b5a5b0f8b3b2a3"><span class="__cf_email__" data-cfemail="93f7f2fdfaf6ffbde4f2f4fdf6e1d3e6f0e0f5bdf6f7e6">[email&#160;protected]</span></a>
     </p>
   </div>
 </header>
@@ -371,6 +389,28 @@ footer{
         </p>
         <div class="small-links">
           <span class="pill" onclick="copyLink('https://zmap-3d.pages.dev/'); return false;">Copy Link</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://zmap-tools.readthedocs.io/en/latest/index.html" class="portal-tile" aria-label="Open zmap-tools Documentation">
+      <div class="docs-banner">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="4" width="28" height="40" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M17 14h14M17 20h14M17 26h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="34" cy="36" r="8" fill="var(--accent)" stroke="var(--bg)" stroke-width="2"/>
+          <path d="M31.5 36l2 2 3.5-3.5" stroke="var(--bg)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="docs-banner-label mono">zmap-tools</span>
+      </div>
+      <div class="portal-content">
+        <div class="portal-title">Python Package Docs</div>
+        <p class="portal-desc">
+          API reference, installation guide, and tutorials for the <code>zmap-tools</code> Python package — annotate new datasets against the ZMAP reference.
+        </p>
+        <div class="small-links">
+          <span class="pill" onclick="copyLink('https://zmap-tools.readthedocs.io/en/latest/index.html'); return false;">Copy Link</span>
+          <span class="pill" onclick="copyLink('pip install zmap-tools'); return false;">pip install</span>
         </div>
       </div>
     </a>
@@ -484,7 +524,7 @@ footer{
 
 <div id="toast">Link copied</div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function copyLink(url){
   if (navigator.clipboard && navigator.clipboard.writeText){
     navigator.clipboard.writeText(url).then(() => showToast("Link copied"));
@@ -497,16 +537,4 @@ function copyLink(url){
     document.execCommand("copy");
     document.body.removeChild(t);
     showToast("Link copied");
-  }
-}
-
-function showToast(msg){
-  const toast = document.getElementById("toast");
-  toast.textContent = msg;
-  toast.className = "show";
-  setTimeout(() => { toast.className = toast.className.replace("show",""); }, 1400);
-}
-</script>
-
-</body>
-</html>
+ 
