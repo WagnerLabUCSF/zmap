@@ -110,7 +110,7 @@ h2{
 
 .portal-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:26px;
   margin-top:22px;
 }
@@ -280,34 +280,13 @@ footer{
   flex-wrap:wrap;
 }
 
-/* Package card */
-.pkg-card{
-  display:flex;
-  align-items:flex-start;
-  gap:20px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:22px 22px;
-  background:#fff;
-}
-
-.pkg-icon{
-  flex:0 0 auto;
-  color:var(--accent);
-}
-
-.pkg-body{
-  flex:1 1 auto;
-  min-width:0;
-}
-
 .docs-banner{
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   gap:16px;
-  padding:184px 18px;
+  padding:96px 18px;
   background:linear-gradient(135deg, var(--soft) 0%, #eaf0f7 100%);
   color:var(--accent);
   border-bottom:1px solid var(--border);
@@ -352,8 +331,6 @@ footer{
 @media (max-width:520px){
   .container{ padding:34px 16px 60px 16px; }
   h1{ font-size:1.7rem; }
-  .portal-grid{ grid-template-columns:1fr; }
-  .pkg-card{ flex-direction:column; }
 }
 </style>
 </head>
@@ -374,7 +351,7 @@ footer{
       <sup>2</sup> Eli and Edythe Broad Center for Regeneration Medicine and Stem Cell Research, University of California San Francisco, San Francisco, CA, USA
     </p>
     <p class="correspondence">
-      <strong>* Correspondence:</strong> <a href="/cdn-cgi/l/email-protection#cfabaea1a6aaa3e1b8aea8a1aabd8fbaacbca9e1aaabba"><span class="__cf_email__" data-cfemail="7216131c1b171e5c0513151c170032071101145c171607">[email&#160;protected]</span></a>
+      <strong>* Correspondence:</strong> <a href="mailto:daniel.wagner@ucsf.edu">daniel.wagner@ucsf.edu</a>
     </p>
   </div>
 </header>
@@ -421,57 +398,38 @@ footer{
       </div>
     </a>
 
-    <a href="ontology_browser.html" class="portal-tile" aria-label="Open ZMAP Ontology Browser">
-      <img src="assets/zmap_ontology.png" alt="ZMAP Ontology Browser Preview" class="portal-image">
+    <a href="https://zmap-tools.readthedocs.io/en/latest/index.html" class="portal-tile" aria-label="Open zmap-tools Documentation">
+      <div class="docs-banner">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="4" width="28" height="40" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M17 14h14M17 20h14M17 26h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="34" cy="36" r="8" fill="var(--accent)" stroke="var(--bg)" stroke-width="2"/>
+          <path d="M31.5 36l2 2 3.5-3.5" stroke="var(--bg)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        <span class="docs-banner-label mono">zmap-tools</span>
+      </div>
       <div class="portal-content">
-        <div class="portal-title">Ontology Browser</div>
+        <div class="portal-title">Python Package Docs</div>
         <p class="portal-desc">
-          Interactively explore the ZMAP hierarchical annotation ontology — germ layers, tissues, cell types, and clusters.
+          API reference, installation guide, and tutorials for the <code>zmap-tools</code> Python package — annotate new datasets against the ZMAP reference.
         </p>
         <div class="small-links">
-          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('ontology_browser.html'); return false;">Copy Link</span>
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://zmap-tools.readthedocs.io/en/latest/index.html'); return false;">Copy Link</span>
+          <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('pip install zmap-tools'); return false;">pip install</span>
         </div>
       </div>
     </a>
 
   </div>
-</section>
 
+  <!-- Tutorial videos -->
+  <div style="margin-top:26px;">
+    <h3 style="margin:0 0 8px 0; font-size:1.05rem; color:var(--accent);">Tutorial Videos</h3>
+    <p class="tutorial-lede">
+      Full-screen-friendly walkthroughs for the 2D and 3D browsers.
+    </p>
 
-<section>
-  <h2>Python Package</h2>
-
-  <div class="pkg-card">
-    <div class="pkg-icon">
-      <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="4" width="28" height="40" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M17 14h14M17 20h14M17 26h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="34" cy="36" r="8" fill="var(--accent)" stroke="var(--bg)" stroke-width="2"/>
-        <path d="M31.5 36l2 2 3.5-3.5" stroke="var(--bg)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-    </div>
-    <div class="pkg-body">
-      <div class="portal-title" style="margin-bottom:4px;"><span class="mono">zmap-tools</span></div>
-      <p class="portal-desc" style="margin-bottom:10px;">
-        API reference, installation guide, and tutorials for the <code>zmap-tools</code> Python package — annotate new datasets against the ZMAP reference.
-      </p>
-      <div class="small-links">
-        <a class="pill" href="https://zmap-tools.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Documentation</a>
-        <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('pip install zmap-tools'); return false;">pip install</span>
-        <span class="pill" onclick="event.stopPropagation(); event.preventDefault(); copyLink('https://zmap-tools.readthedocs.io/en/latest/index.html'); return false;">Copy Link</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section>
-  <h2>Tutorial Videos</h2>
-  <p class="tutorial-lede">
-    Full-screen-friendly walkthroughs for the 2D and 3D browsers.
-  </p>
-
-  <div class="tutorial-grid">
+    <div class="tutorial-grid">
 
       <!-- Replace these URLs with your real video URLs -->
       <div class="tutorial-card">
@@ -519,6 +477,7 @@ footer{
       </div>
 
     </div>
+  </div>
 </section>
 
 
@@ -573,14 +532,12 @@ footer{
 <script>
 function copyLink(url){
   if (navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(url).then(function(){ showToast("Link copied"); });
+    navigator.clipboard.writeText(url).then(() => showToast("Link copied"));
   } else {
-    var t = document.createElement("textarea");
+    // Fallback
+    const t = document.createElement("textarea");
     t.value = url;
-    t.style.position = "fixed";
-    t.style.opacity = "0";
     document.body.appendChild(t);
-    t.focus();
     t.select();
     document.execCommand("copy");
     document.body.removeChild(t);
@@ -589,12 +546,12 @@ function copyLink(url){
 }
 
 function showToast(msg){
-  var el = document.getElementById("toast");
-  el.textContent = msg;
-  el.classList.add("show");
-  clearTimeout(window._toastTimer);
-  window._toastTimer = setTimeout(function(){ el.classList.remove("show"); }, 1800);
+  const toast = document.getElementById("toast");
+  toast.textContent = msg;
+  toast.className = "show";
+  setTimeout(() => { toast.className = toast.className.replace("show",""); }, 1400);
 }
 </script>
+
 </body>
 </html>
